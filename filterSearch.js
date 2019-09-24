@@ -3,7 +3,7 @@ var sightings = data;
 
 // Select the button
 var button = d3.select("#button")
-
+var tbody = document.getElementById("bod")
 button.on("click",function() {
     
     //Select the input element and get the raw HTML mode
@@ -18,9 +18,9 @@ button.on("click",function() {
     var filterData= sightings.filter(sightings => sightings.datetime === inputValue);
 
     console.log(filterData);
-
-    //filterData.forEach(row => {
-      //tbody.append('tr').html(`<td>${row.datetime}</td><td>${row.city}</td><td>${row.state}</td><td>${row.country}</td><td>${row.shape}</td><td>${row.durationMinutes}</td><td>${row.comments}</td>`)
+    tableHTML = "";
+    filterData.forEach(row => {
+      tableHTML += `<tr><td>${row.datetime}</td><td>${row.city}</td><td>${row.state}</td><td>${row.country}</td><td>${row.shape}</td><td>${row.durationMinutes}</td><td>${row.comments}</td></tr>`;
     })
-
-
+    tbody.innerHTML = tableHTML;
+  }) 

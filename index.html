@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <title><a href="webpage.html"> UFO sightings: Javascript Homework </a></title>
+    <title> UFO sightings: Javascript Homework </title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,25 +14,27 @@
         <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 
-<body> 
+<body>
+    
     <div class="container-fluid headerContainer">
-            <div class ="row">
-                <div class="col-md-6">
-                    <h1><a href="webpage.html">UFO Sightings Data</h1></a>
-                </div>
-                    <form>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="sighting-data">Filter the sighting data by date (d/m/yyyy)</label>
-                                <input class="form-control" id="sighting-data-input" name="sighting-data" type="text" placeholder="1/1/2010">
-                            </div>
-                            <button id="button" type="button" class="btn btn-default">
-                                <a href="other.html">Enter</a>
+        <div class ="row">
+            <div class="col-md-6">
+                <h1>UFO Sightings Data</h1>
+            </div>
+                <form>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="sighting-data">Filter the sighting data by date (d/m/yyyy)</label>
+                            <input class="form-control" id="sighting-data-input" name="sighting-data" type="text" placeholder="1/1/2010">
+                        </div>
+                        <button id="button" type="button" class="btn btn-default">
+                                ENTER
                         </button>
                     </div>
                 </form>
-            </div>
         </div>
+    </div>
+
     <div class="container-fluid tableContainer">
         <div class="row">
             <div class="col-md-12">
@@ -42,7 +44,7 @@
 
         <div class="row table-header">
             <div class="col-md-12">
-                <table class="table table-striped">
+                <table id="table" class="table table-striped">
                     <thead>
                         <th>date/time</th>
                         <th>city</th>
@@ -52,12 +54,20 @@
                         <th>duration (minutes)</th>
                         <th>comment</th>
                     </thead>
-                    <tbody id="filterbody">
+                    <tbody id="bod">
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <script src="data.js"></script>
-    <script src="filterSearch.js"></script>
 </body>
+
+<!--The Script for the UFO data-->
+<script src="data.js"></script>
+<script src="loopDataApp.js"></script>
+<script src="filterSearch.js"></script>
+
+
+
+
+</html>
